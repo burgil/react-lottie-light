@@ -30,7 +30,7 @@ Looking for lottie files › https://www.lottiefiles.com/
 
 Install through npm:
 ```
-npm install --save react-lottie
+npm install --save react-lottie-light
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ Import pinjump.json.json as animation data
 
 ```jsx
 import React from 'react'
-import Lottie from 'react-lottie';
+import Lottie from 'react-lottie-light';
 import * as animationData from './pinjump.json'
 
 export default class LottieControl extends React.Component {
@@ -118,7 +118,7 @@ eventListeners=[
 
 ## Related Projects
 
-* [Bodymovin](https://github.com/bodymovin/bodymovin) react-lottie is a wrapper of bodymovin
+* [Bodymovin](https://github.com/bodymovin/bodymovin) react-lottie-light is a wrapper of bodymovin
 * [Angular Lottie](https://github.com/chenqingspring/ng-lottie) angular implementation
 * [Vue Lottie](https://github.com/chenqingspring/vue-lottie) vue implementation
 * [React Native Lottie](https://github.com/airbnb/lottie-react-native) react native implementation by airbnb
