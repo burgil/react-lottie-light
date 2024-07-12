@@ -1,3 +1,5 @@
+# This is a fork of react-lottie - use at your own risk - removed EVAL security issues by switching to the light version
+
 # Lottie Animation View for React ([Angular](https://github.com/chenqingspring/ng-lottie), [Vue](https://github.com/chenqingspring/vue-lottie))
 
 [![npm version](https://badge.fury.io/js/react-lottie.svg)](http://badge.fury.io/js/react-lottie)
