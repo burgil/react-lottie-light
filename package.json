@@ -1,7 +1,7 @@
 {
   "name": "react-lottie-light",
   "version": "1.2.5",
-  "description": "lottie animation view for React",
+  "description": "lottie animation view for React - Fixed",
   "repository": {
     "type": "git",
     "url": "https://github.com/burgil/react-lottie-light"
