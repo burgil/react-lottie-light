@@ -28,9 +28,14 @@ Looking for lottie files › https://www.lottiefiles.com/
 
 ## Installation
 
-Install through npm:
+Install through YARN:
 ```
-npm install --save react-lottie-light
+yarn add -D burgil/react-lottie-light
+```
+
+Install through NPM:
+```
+npm install --save burgil/react-lottie-light
 ```
 
 ## Usage
