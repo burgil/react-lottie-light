@@ -30,12 +30,12 @@ Looking for lottie files › https://www.lottiefiles.com/
 
 Install through YARN:
 ```
-yarn add -D burgil/react-lottie-light
+yarn add burgil/react-lottie-light
 ```
 
 Install through NPM:
 ```
-npm install --save burgil/react-lottie-light
+npm install burgil/react-lottie-light
 ```
 
 ## Usage
