@@ -1,32 +1,20 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _extends3 = _interopRequireDefault(_extends2);
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = require('babel-runtime/helpers/createClass');
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = require('babel-runtime/helpers/inherits');
-
-var _inherits3 = _interopRequireDefault(_inherits2);
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _react = require('react');
 
@@ -36,49 +24,30 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _lottie_light = require('lottie-web/build/player/lottie_light');
+var _lottieWebBuildPlayerLottie_light = require('lottie-web/build/player/lottie_light');
 
-var _lottie_light2 = _interopRequireDefault(_lottie_light);
+var _lottieWebBuildPlayerLottie_light2 = _interopRequireDefault(_lottieWebBuildPlayerLottie_light);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Lottie = function (_React$Component) {
-  (0, _inherits3.default)(Lottie, _React$Component);
+var Lottie = (function (_React$Component) {
+  _inherits(Lottie, _React$Component);
 
   function Lottie() {
-    var _ref;
+    _classCallCheck(this, Lottie);
 
-    var _temp, _this, _ret;
-
-    (0, _classCallCheck3.default)(this, Lottie);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Lottie.__proto__ || (0, _getPrototypeOf2.default)(Lottie)).call.apply(_ref, [this].concat(args))), _this), _this.handleClickToPause = function () {
-      // The pause() method is for handling pausing by passing a prop isPaused
-      // This method is for handling the ability to pause by clicking on the animation
-      if (_this.anim.isPaused) {
-        _this.anim.play();
-      } else {
-        _this.anim.pause();
-      }
-    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+    _get(Object.getPrototypeOf(Lottie.prototype), 'constructor', this).apply(this, arguments);
   }
 
-  (0, _createClass3.default)(Lottie, [{
+  _createClass(Lottie, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var _props = this.props,
-          options = _props.options,
-          eventListeners = _props.eventListeners;
-      var loop = options.loop,
-          autoplay = options.autoplay,
-          animationData = options.animationData,
-          rendererSettings = options.rendererSettings,
-          segments = options.segments;
-
+      var _props = this.props;
+      var options = _props.options;
+      var eventListeners = _props.eventListeners;
+      var loop = options.loop;
+      var autoplay = options.autoplay;
+      var animationData = options.animationData;
+      var rendererSettings = options.rendererSettings;
+      var segments = options.segments;
 
       this.options = {
         container: this.el,
@@ -90,9 +59,9 @@ var Lottie = function (_React$Component) {
         rendererSettings: rendererSettings
       };
 
-      this.options = (0, _extends3.default)({}, this.options, options);
+      this.options = _extends({}, this.options, options);
 
-      this.anim = _lottie_light2.default.loadAnimation(this.options);
+      this.anim = _lottieWebBuildPlayerLottie_light2['default'].loadAnimation(this.options);
       this.registerEvents(eventListeners);
     }
   }, {
@@ -102,8 +71,8 @@ var Lottie = function (_React$Component) {
       if (this.options.animationData !== nextProps.options.animationData) {
         this.deRegisterEvents(this.props.eventListeners);
         this.destroy();
-        this.options = (0, _extends3.default)({}, this.options, nextProps.options);
-        this.anim = _lottie_light2.default.loadAnimation(this.options);
+        this.options = _extends({}, this.options, nextProps.options);
+        this.anim = _lottieWebBuildPlayerLottie_light2['default'].loadAnimation(this.options);
         this.registerEvents(nextProps.eventListeners);
       }
     }
@@ -172,37 +141,47 @@ var Lottie = function (_React$Component) {
   }, {
     key: 'registerEvents',
     value: function registerEvents(eventListeners) {
-      var _this2 = this;
+      var _this = this;
 
       eventListeners.forEach(function (eventListener) {
-        _this2.anim.addEventListener(eventListener.eventName, eventListener.callback);
+        _this.anim.addEventListener(eventListener.eventName, eventListener.callback);
       });
     }
   }, {
     key: 'deRegisterEvents',
     value: function deRegisterEvents(eventListeners) {
-      var _this3 = this;
+      var _this2 = this;
 
       eventListeners.forEach(function (eventListener) {
-        _this3.anim.removeEventListener(eventListener.eventName, eventListener.callback);
+        _this2.anim.removeEventListener(eventListener.eventName, eventListener.callback);
       });
+    }
+  }, {
+    key: 'handleClickToPause',
+    value: function handleClickToPause() {
+      // The pause() method is for handling pausing by passing a prop isPaused
+      // This method is for handling the ability to pause by clicking on the animation
+      if (this.anim.isPaused) {
+        this.anim.play();
+      } else {
+        this.anim.pause();
+      }
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this4 = this;
+      var _this3 = this;
 
-      var _props2 = this.props,
-          width = _props2.width,
-          height = _props2.height,
-          ariaRole = _props2.ariaRole,
-          ariaLabel = _props2.ariaLabel,
-          isClickToPauseDisabled = _props2.isClickToPauseDisabled,
-          title = _props2.title;
-
+      var _props2 = this.props;
+      var width = _props2.width;
+      var height = _props2.height;
+      var ariaRole = _props2.ariaRole;
+      var ariaLabel = _props2.ariaLabel;
+      var isClickToPauseDisabled = _props2.isClickToPauseDisabled;
+      var title = _props2.title;
 
       var getSize = function getSize(initial) {
-        var size = void 0;
+        var size = undefined;
 
         if (typeof initial === 'number') {
           size = initial + 'px';
@@ -213,7 +192,7 @@ var Lottie = function (_React$Component) {
         return size;
       };
 
-      var lottieStyles = (0, _extends3.default)({
+      var lottieStyles = _extends({
         width: getSize(width),
         height: getSize(height),
         overflow: 'hidden',
@@ -225,12 +204,12 @@ var Lottie = function (_React$Component) {
         return null;
       } : this.handleClickToPause;
 
-      return (
+      return(
         // Bug with eslint rules https://github.com/airbnb/javascript/issues/1374
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-        _react2.default.createElement('div', {
-          ref: function ref(c) {
-            _this4.el = c;
+        _react2['default'].createElement('div', {
+          ref: function (c) {
+            _this3.el = c;
           },
           style: lottieStyles,
           onClick: onClickHandler,
@@ -242,27 +221,27 @@ var Lottie = function (_React$Component) {
       );
     }
   }]);
+
   return Lottie;
-}(_react2.default.Component);
+})(_react2['default'].Component);
 
-exports.default = Lottie;
-
+exports['default'] = Lottie;
 
 Lottie.propTypes = {
-  eventListeners: _propTypes2.default.arrayOf(_propTypes2.default.object),
-  options: _propTypes2.default.object.isRequired,
-  height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
-  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
-  isStopped: _propTypes2.default.bool,
-  isPaused: _propTypes2.default.bool,
-  speed: _propTypes2.default.number,
-  segments: _propTypes2.default.arrayOf(_propTypes2.default.number),
-  direction: _propTypes2.default.number,
-  ariaRole: _propTypes2.default.string,
-  ariaLabel: _propTypes2.default.string,
-  isClickToPauseDisabled: _propTypes2.default.bool,
-  title: _propTypes2.default.string,
-  style: _propTypes2.default.string
+  eventListeners: _propTypes2['default'].arrayOf(_propTypes2['default'].object),
+  options: _propTypes2['default'].object.isRequired,
+  height: _propTypes2['default'].oneOfType([_propTypes2['default'].string, _propTypes2['default'].number]),
+  width: _propTypes2['default'].oneOfType([_propTypes2['default'].string, _propTypes2['default'].number]),
+  isStopped: _propTypes2['default'].bool,
+  isPaused: _propTypes2['default'].bool,
+  speed: _propTypes2['default'].number,
+  segments: _propTypes2['default'].arrayOf(_propTypes2['default'].number),
+  direction: _propTypes2['default'].number,
+  ariaRole: _propTypes2['default'].string,
+  ariaLabel: _propTypes2['default'].string,
+  isClickToPauseDisabled: _propTypes2['default'].bool,
+  title: _propTypes2['default'].string,
+  style: _propTypes2['default'].string
 };
 
 Lottie.defaultProps = {
@@ -275,3 +254,4 @@ Lottie.defaultProps = {
   isClickToPauseDisabled: false,
   title: ''
 };
+module.exports = exports['default'];

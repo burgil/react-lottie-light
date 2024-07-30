@@ -109,7 +109,7 @@ export default class Lottie extends React.Component {
     });
   }
 
-  handleClickToPause = () => {
+  handleClickToPause() {
     // The pause() method is for handling pausing by passing a prop isPaused
     // This method is for handling the ability to pause by clicking on the animation
     if (this.anim.isPaused) {
